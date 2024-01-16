@@ -1,0 +1,77 @@
+-- Spanish hub V10
+-- Might take 5-10 seconds to load
+
+-- Enjoy!!!!
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gojoomaster/SpanishhubV10/main/scriptfinished.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("🔐🔐🔐🍍🇨🇴🇲🇽🇵🇪SpanishHub V8 nescoroco🇪🇸🇻🇪🇦🇷🍊 KEY 🔐🔐🔐", "Synapse")
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))() 
+
+local Player = game.Players.LocalPlayer
+
+function CorrectKeyAndLoadTheScript()
+    loadstring(game:HttpGet('https://paste.myconan.net/488770.txt'))()
+end
+
+OrionLib:MakeNotification({
+	Name = "Logeeate!",
+	Content = "Necesitas una key!"..Player.Name..".",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+}) 
+
+getgenv().Key = "N35c0r0c0_tr011yk3y_Sp4n1shubv8_J01ND1SC0RD" 
+getgenv().KeyInput = "N35c0r0c0_tr011yk3y_Sp4n1shubv8_J01ND1SC0RD"
+
+local Tab = Window:NewTab("KEY SYSTEM")
+
+local Section = Tab:NewSection("Key System")
+
+Section:NewTextBox("Enter Key", "Key", function(Value)
+		getgenv().KeyInput = Value
+end) 
+
+Section:NewButton("Verificar la Key", "Cuando hallas peusto el link, toca este boton!", function()
+            if getgenv().KeyInput == getgenv().Key then
+            OrionLib:MakeNotification({
+                Name = "Verifianco la Key",
+                Content = "Verificando la key que colocaste",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            wait(2)
+            OrionLib:MakeNotification({
+                Name = "Key Correcta!",
+                Content = "Esa Key correcta, disfruta!",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            wait(.3)
+            CorrectKeyAndLoadTheScript()
+        else
+           OrionLib:MakeNotification({
+                Name = "Revisando la key",
+                Content = "Verificanco la key que colocaste",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+            wait(2)
+            OrionLib:MakeNotification({
+                Name = "Key incorrecta!",
+                Content = "La key que proporcionaste no es valida",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+        end
+end)  
+
+Section:NewButton("Copiar Link", "Copiaras el link de la key en tu ClipBoard!", function()
+          		setclipboard("https://link-hub.net/1088332/spanish-hub-v8-key") 
+          OrionLib:MakeNotification({
+                Name = "Link Copiado!",
+                Content = "Link satisfactoriamente copiado",
+                Image = "rbxassetid://4483345998",
+                Time = 5
+            })
+end)
